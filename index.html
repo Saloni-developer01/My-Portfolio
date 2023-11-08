@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- link of animation on scroll -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+
+
+    <!-- Animation of navbar on scroll script -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="cursor" id="cursor"></div>
+
+    <header class="header">
+        <div class="logo" data-aos="fade-right">
+            <h1>PORTFO<span>LIO</span></h1>
+        </div>
+
+        <nav class="navbar" data-aos="fade-right">
+            <ul class="list-Item">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about" class="rest">ABOUT</a></li>
+                <li><a href="#skills" class="rest">SKILLS</a></li>
+                <li><a href="#projects" class="rest">PROJECTS</a></li>
+                <li><a href="#contact" class="rest">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="mobile-btn">
+            <ion-icon name="menu-outline" class="nav-Icons"></ion-icon>
+            <ion-icon name="close-outline" class="nav-Icons"></ion-icon>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="nameDiv" data-aos="fade-right">
+
+            <h1>Hello, its Me</h1>
+            <h2>Saloni Yadav</h2>
+
+            <div class="wrapper">
+                <div class="static-text">And I'm a</div>
+
+                <ul class="dynamic-text">
+                    <li><span>Frontend Developer.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="subtitleDiv">
+            <p>
+                I Am A Skilled And Passionate Web Designer. I Design Beautiful Simple Things And I Love What I Do. I
+                Love To Work On Web Application Using Technologies Like HTML, Css, Js and React .
+            </p>
+        </div>
+
+        <button class="btn">Hire Me !</button>
+
+
+    </section>
+
+    <section class="about" id="about">
+
+        <div class="aboutDiv" >
+            <h1 data-aos="fade-left">About <span>Me</span></h1>
+            <h2 data-aos="fade-left">FRONTEND WEB DEVELOPER !</h2>
+            <p data-aos="fade-left">I will help you with finging a solution and solve your problem. We use process
+                design to create digital
+                products. my passion lies in creating captivating website design and implementing them through frontend
+                development. I take pride in staying up-to-date with current design trends and leveraging my creativity
+                to
+                produce visually appealing and user-friendly websites. I can provide clean code and pixel Perfect
+                design..
+            </p>
+        </div>
+
+
+        <button class="Aboutbtn" data-aos="fade-left">Read More</button>
+    </section>
+
+
+    <section class="skills" id="skills">
+
+
+        <div class="headTitle" data-aos="fade-right">
+            <h1>My <span class="skillSpan">Skills</span> </h1>
+            <h2>Here is my skills to represent my expertise</h2>
+        </div>
+
+
+        <div class="container">
+
+            <div class="skillBox " data-aos="fade-right">
+                <span class="title">HTML</span>
+
+                <div class="skill-bar">
+                    <span class="skill-per html">
+                        <span class="tooltip" data-aos="fade-right">90%</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="skillBox" data-aos="fade-right">
+                <span class="title">CSS</span>
+
+                <div class="skill-bar">
+                    <span class="skill-per css">
+                        <span class="tooltip" data-aos="fade-right">65%</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="skillBox" data-aos="fade-right">
+                <span class="title">JavaScript</span>
+
+                <div class="skill-bar">
+                    <span class="skill-per javascript">
+                        <span class="tooltip" data-aos="fade-right">40%</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="skillBox" data-aos="fade-right">
+                <span class="title">React</span>
+
+                <div class="skill-bar">
+                    <span class="skill-per react">
+                        <span class="tooltip" data-aos="fade-right">30%</span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+
+        <div class="main-text">
+            <p data-aos="fade-left">What I Will Do For You ?</p>
+            <h1 data-aos="fade-left"><span>Latest</span> Projects</h1>
+        </div>
+
+        <div class="project-filter">
+            <li class="list list1 project-filter-active"  data-filter="all" data-aos="fade-left">All</li>
+            <li class="list list2"   data-filter="react" data-aos="fade-up">React Project</li>
+            <li class="list list3"    data-filter="api" data-aos="fade-right">API Key Projects</li>
+            <li class="list list4"    data-filter="clone" data-aos="fade-left">Clone Projects</li>
+            <li class="list list5"    data-filter="web" data-aos="fade-down">Gaming Website</li>
+            <li class="list list2"    data-filter="Editor" data-aos="fade-right">Code Editor</li>
+
+
+        </div>
+
+        <div class="portfolio-content" data-aos="fade-left">
+
+            <div class="row all  react">
+                <img src="Assets/todo-app.jpg">
+
+                <div class="layer">
+
+                    <h5>To-Do List</h5>
+                    <p>
+                        This is the to-do web which is made by using "react js"  And it is made in a very simple way.
+                    </p>
+                    <a href="#"><ion-icon name="log-out-outline" class="link-icon"></ion-icon></a>
+
+                </div>
+
+            </div>
+
+            <div class="row Editor" >
+
+                <img src="Assets/codeEditor.png">
+
+                <div class="layer">
+
+                    <h5>Portrait Master</h5>
+                    <p>
+                        This is very simple and Beautiful Code Editor in which you design a different types of website!
+                    </p>
+                    <a href="#"><ion-icon name="log-out-outline" class="link-icon"></ion-icon></a>
+
+                </div>
+
+            </div>
+
+            <div class="row web" >
+
+                <img src="Assets/gamezone perfect.jpg">
+
+                <div class="layer">
+                    <h5>Gamers Web</h5>
+                    <p>
+                       "S.V gamezone" Check out it with the link below.
+                    </p>
+                    <a href="#"><ion-icon name="log-out-outline" class="link-icon"></ion-icon></a>
+
+                </div>
+
+            </div>
+
+            <div class="row clone" >
+
+                <img src="Assets/flipkart clone.png">
+
+                <div class="layer">
+
+                    <h5> FlipKart Clone</h5>
+                    <p>
+                        This the famous online shopping app which I have cloned here.
+                    </p>
+                    <a href="#"><ion-icon name="log-out-outline" class="link-icon"></ion-icon></a>
+
+                </div>
+
+            </div>
+
+            <div class="row clone">
+
+                <img src="Assets/myntraClone.jpg">
+
+                <div class="layer">
+
+                    <h5>Myntra Clone</h5>
+                    <p>
+                        This is also E-commerce Website which I have cloned here.
+                    </p>
+                    <a href="#"><ion-icon name="log-out-outline" class="link-icon"></ion-icon></a>
+
+                </div>
+
+            </div>
+
+            <div class="row api" >
+
+                <img src="Assets/imageGenerator.jpg">
+
+                <div class="layer">
+
+                    <h5>Image Generator</h5>
+                    <p>
+                        This is the image searching web in which you can see the images of your choice.  "API WEB"
+                    </p>
+                    <a href="#"><ion-icon name="log-out-outline" class="link-icon"></ion-icon></a>
+
+                </div>
+
+            </div>
+
+
+            <div class="row web">
+
+                <img src="Assets/matching game.jpg">
+
+                <div class="layer">
+
+                    <h5>Memory Game</h5>
+                    <p>
+                        This is a great game to test your memory and you can play it at your leisure to pass time.
+                    </p>
+                    <a href="#"><ion-icon name="log-out-outline" class="link-icon"></ion-icon></a>
+
+                </div>
+
+            </div>
+
+
+            <div class="row api" >
+
+                <img src="Assets/newsapi.jpg">
+
+                <div class="layer">
+
+                    <h5>News API</h5>
+                    <p>
+                        You can use this web to know information about the world and I have tried to make it different
+                    </p>
+                    <a href="#"><ion-icon name="log-out-outline" class="link-icon"></ion-icon></a>
+
+                </div>
+
+            </div>
+
+
+            <div class="row api" >
+
+                <img src="Assets/expense tracker.jpg">
+
+                <div class="layer">
+
+                    <h5>Wallet Budget</h5>
+                    <p>
+                        This is a very good web to know how much money we have spent, where and how much is left.
+                    </p>
+                    <a href="#"><ion-icon name="log-out-outline" class="link-icon"></ion-icon></a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <div class="contact-title">
+            <h1 data-aos="fade-right">Contact <span data-aos="fade-right">Me</span></h1>
+            <p data-aos="fade-right">
+                Please fill out the form below to discuss any work opportunities .
+            </p>
+
+            <div class="contactDetail">
+                <h2 data-aos="fade-right">91-XXXXXXXXX</h2>
+                <h3 data-aos="fade-right">sy200529@gmail.com</h3>
+            </div>
+
+            <div class="icons">
+                <ion-icon name="logo-instagram" class="insta" data-aos="fade-right"></ion-icon>
+                <ion-icon name="logo-facebook" class="face" data-aos="fade-right"></ion-icon>
+                <ion-icon name="logo-twitter" class="twitter" data-aos="fade-right"></ion-icon>
+            </div>
+        </div>
+
+        <form class="form">
+            <div class="inputGroup first">
+                <input type="text" id="name" required autocomplete="off">
+                <label for="name" class="name"> <ion-icon name="person-sharp"></ion-icon> Your
+                    Name</label>
+            </div>
+
+            <div class="inputGroup">
+                <input type="email" id="email" data-aos="fade-right" autocomplete="off" required>
+                <label for="email" data-aos="fade-right"> <ion-icon name="mail-sharp"></ion-icon> E-mail Id</label>
+            </div>
+
+            <div class="inputGroup">
+                <input type="text" id="number" data-aos="fade-right" autocomplete="off" required>
+                <label for="number" data-aos="fade-right"> <ion-icon name="call-sharp"></ion-icon> Phone No.</label>
+            </div>
+
+            <div class="inputGroup">
+                <textarea id="message" rows="8" data-aos="fade-right" autocomplete="off" required></textarea>
+                <label for="message" data-aos="fade-right"> <ion-icon name="logo-wechat"></ion-icon> Your
+                    Message</label>
+            </div>
+
+            <button type="submit" class="submit">Submit</button>
+        </form>
+    </section>
+
+
+    <footer class="footer">
+        <h1>Copyright @copy; portfolio 2023 | All Right Reserved</h1>
+    </footer>
+
+
+
+
+
+
+
+    <!-- Animation on scroll js script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 80,
+            duration: 1000,
+        });
+    </script>
+
+
+    <!-- Animation of navbar on scroll script  -->
+    <script>
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop()) {
+                $('header').addClass('changeColorOfNavbar');
+            }
+            else {
+                $('header').removeClass('changeColorOfNavbar');
+            }
+        })
+    </script>
+
+
+
+    <!-- icons script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>
