@@ -1431,10 +1431,6 @@ textarea:valid~label {
 
 
 @media screen and (max-width:940px) {
-
-    .cursor{
-        display:none;
-    }
     .headTitle h2 {
         font-size: 15px;
         font-weight: 400;
