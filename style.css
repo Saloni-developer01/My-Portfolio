@@ -15,7 +15,8 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     cursor: grab;
 }
 
@@ -28,7 +29,7 @@ body{
 
 
 
-
+/* 
 .cursor {
     display: block;
     width: 35px;
@@ -75,7 +76,8 @@ body{
         transform: scale(1);
         opacity: 0;
     }
-}
+} */
+
 
 
 
@@ -106,7 +108,6 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 1.10rem 4rem;
-    /* background-color: #040D12; */
     width: 100%;
     height: 12vh;
     position: fixed;
@@ -119,7 +120,6 @@ body{
 
 .changeColorOfNavbar {
     background-color: #091C27;
-    /* background-color: black; */
 }
 
 
@@ -199,9 +199,156 @@ body{
 }
 
 .home {
-    background-color: #040D12;
+
+    display: flex;
+    background: #040D12;
     width: 100%;
     height: 100vh;
+    position: relative;
+}
+
+
+.wrapper2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 6px solid #106d6d;
+}
+
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+    border-radius: 50%
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+    border-radius: 50%
+}
+
+.box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+    border-radius: 50%
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 6s linear infinite;
+    border-radius: 50%
+}
+
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+    border-radius: 50%
+}
+
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+    }
+
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+
+.custom-shape-divider-bottom-1700665736 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1700665736 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 171px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1700665736 .shape-fill {
+    fill: #121517;
+}
+
+
+.left-side {
+    width: 100%;
+}
+
+
+
+
+.right-side {
+    margin-top: 20px;
+    margin-right: 90px;
+
+}
+
+.right-side img {
+    width: 500px;
+    height: 90vh;
+    opacity: 1.5;
+    transition: all .2s ease-in-out;
+}
+
+.right-side img:hover {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    filter: blur(2px);
 }
 
 .nameDiv {
@@ -239,6 +386,7 @@ body{
 
 .wrapper {
     display: inline-flex;
+    width: 100%;
 }
 
 .static-text {
@@ -246,7 +394,7 @@ body{
 }
 
 .wrapper .static-text {
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     padding-left: 16px;
     font-weight: 400;
@@ -262,7 +410,7 @@ body{
 
 .dynamic-text li {
     color: #1c9e9e;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     position: relative;
 }
@@ -289,7 +437,7 @@ body{
     color: rgb(204, 204, 204);
     padding-left: 63px;
     padding-top: 12px;
-    max-width: 40%;
+    max-width: 80%;
     font-size: 12px;
     font-weight: 400;
     animation: transitionIn 2.75s;
@@ -301,7 +449,6 @@ body{
     padding: 3px 30px;
     font-size: 16px;
     border-radius: 15px;
-    /* background-color: #1c9e9e; */
     background: transparent;
     color: #1c9e9e;
     border: 2px solid #1c9e9e;
@@ -340,10 +487,59 @@ body{
     min-height: 100vh;
     width: 100%;
     background-color: #121517;
+    position: relative;
+    display: flex;
 }
 
+.about .left-side img {
+    margin-top: 10px;
+    padding-left: 100px;
+    width: 450px;
+    height: 500px;
+    border-radius: 48% 52% 50% 50% / 12% 28% 72% 88%;
+    transition: border-radius 500ms ease-in-out;
+}
+
+.about .left-side img:hover {
+    border-radius: 88% 12% 50% 50% / 82% 38% 72% 98%;
+    opacity: 0.8;
+    transition: all.3s ease-in-out;
+}
+
+.about .left-side {
+    width: 50%;
+}
+
+
+
+
+.custom-shape-divider-bottom-1700665869 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1700665869 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 124px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1700665869 .shape-fill {
+    fill: #181717;
+}
+
+
+
+
+
 .about h1 {
-    padding-left: 810px;
+    padding-left: 310px;
     font-size: 49px;
     padding-top: 60px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -358,7 +554,7 @@ body{
 }
 
 .about h2 {
-    padding-left: 750px;
+    padding-left: 250px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-top: 40px;
     font-size: 30px;
@@ -367,7 +563,7 @@ body{
 }
 
 .about p {
-    padding-left: 700px;
+    padding-left: 200px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-top: 40px;
     padding-right: 50px;
@@ -377,7 +573,7 @@ body{
 }
 
 .about .Aboutbtn {
-    margin-left: 700px;
+    margin-left: 350px;
     margin-top: 40px;
     font-size: 17px;
     padding: 3px 20px;
@@ -420,13 +616,33 @@ body{
 .skills {
     width: 100%;
     height: 110vh;
-    /* text-align: center; */
+    position: relative;
     background: #181717;
+}
+
+.custom-shape-divider-bottom-1700666055 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1700666055 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 107px;
+}
+
+.custom-shape-divider-bottom-1700666055 .shape-fill {
+    fill: #121517;
 }
 
 .headTitle h1 {
     color: white;
-    padding-top: 80px;
+    padding-top: 32px;
     text-align: center;
     font-weight: 600;
     font-size: 40px;
@@ -448,7 +664,6 @@ body{
     position: relative;
     max-width: 500px;
     width: 100%;
-    /* background: #fff; */
     margin: 60px 395px;
     padding: 10px 20px;
     border-radius: 7px;
@@ -541,6 +756,33 @@ body{
     width: 100%;
     height: 172vh;
     background-color: #121517;
+    position: relative;
+}
+
+
+
+
+
+
+.custom-shape-divider-bottom-1700666311 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1700666311 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 132px;
+}
+
+.custom-shape-divider-bottom-1700666311 .shape-fill {
+    fill: #181717;
 }
 
 .portfolio-content {
@@ -552,7 +794,7 @@ body{
 
 .main-text p {
     color: rgb(192, 190, 190);
-    padding-top: 90px;
+    padding-top: 23px;
     padding-bottom: 5px;
     font-size: 15px;
     font-weight: 500;
@@ -636,7 +878,6 @@ body{
     background: transparent;
     color: #000000;
     border: 1px solid #1c9e9e;
-    /* border-left: 2px solid #000000; */
     outline: none;
     cursor: pointer;
     z-index: 1;
@@ -682,7 +923,6 @@ body{
     background: transparent;
     color: #000000;
     border: 1px solid #1c9e9e;
-    /* border-left: 2px solid #000000; */
     outline: none;
     cursor: pointer;
     z-index: 1;
@@ -726,7 +966,6 @@ body{
     background: transparent;
     color: #000000;
     border: 1px solid #1c9e9e;
-    /* border-left: 2px solid #000000; */
     outline: none;
     cursor: pointer;
     z-index: 1;
@@ -771,7 +1010,6 @@ body{
     background: transparent;
     color: #000000;
     border: 1px solid #1c9e9e;
-    /* border-left: 2px solid #000000; */
     outline: none;
     cursor: pointer;
     z-index: 1;
@@ -831,8 +1069,7 @@ body{
     margin: -11px -16px;
 
     height: 0;
-    /* background: linear-gradient(rgb(114, 113, 113), #494646); */
-    background-color:#091C27;
+    background-color: #091C27;
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -884,7 +1121,7 @@ body{
 
 .contact {
     width: 100%;
-    height: 120vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     background: #181717;
@@ -1077,85 +1314,83 @@ textarea:valid~label {
 
 
 @media screen and (max-width:1009px) {
-    
-.header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.10rem 4rem;
-    /* background-color: #040D12; */
-    width: 100%;
-    height: 12vh;
-    position: fixed;
-    top: 0;
-    transition: .1s ease;
-    cursor: pointer;
-    z-index: 9999;
-}
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.10rem 4rem;
+        width: 100%;
+        height: 12vh;
+        position: fixed;
+        top: 0;
+        transition: .1s ease;
+        cursor: pointer;
+        z-index: 9999;
+    }
 
 
-.changeColorOfNavbar {
-    background-color: #091C27;
-    /* background-color: black; */
-}
+    .changeColorOfNavbar {
+        background-color: #091C27;
+    }
 
 
-.logo h1 {
-    font-size: 2rem;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    text-transform: lowercase;
-}
+    .logo h1 {
+        font-size: 2rem;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        text-transform: lowercase;
+    }
 
 
-.logo h1 span {
-    color: #1c9e9e;
-}
+    .logo h1 span {
+        color: #1c9e9e;
+    }
 
 
-.navbar ul {
-    display: flex;
-    gap: 4rem;
-    font-size: 16px;
-    font-weight: 500;
-    padding-top: 10px;
-}
+    .navbar ul {
+        display: flex;
+        gap: 4rem;
+        font-size: 16px;
+        font-weight: 500;
+        padding-top: 10px;
+    }
 
 
-.navbar ul li a {
-    color: #1c9e9e;
-    border-bottom: 2px solid #1c9e9e;
-}
+    .navbar ul li a {
+        color: #1c9e9e;
+        border-bottom: 2px solid #1c9e9e;
+    }
 
 
-.navbar ul li .rest {
-    color: white;
-    border-bottom: none;
-}
+    .navbar ul li .rest {
+        color: white;
+        border-bottom: none;
+    }
 
 
-.navbar ul li .rest::after {
-    content: '';
-    height: 2px;
-    width: 0%;
-    background-color: #1c9e9e;
-    display: block;
-    transition: .2s ease-in-out;
-}
+    .navbar ul li .rest::after {
+        content: '';
+        height: 2px;
+        width: 0%;
+        background-color: #1c9e9e;
+        display: block;
+        transition: .2s ease-in-out;
+    }
 
 
-.navbar ul li .rest:hover::after {
-    content: '';
-    height: 2px;
-    width: 100%;
-    background-color: #1c9e9e;
-    display: block;
-    color: #1c9e9e;
-}
+    .navbar ul li .rest:hover::after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background-color: #1c9e9e;
+        display: block;
+        color: #1c9e9e;
+    }
 
-.navbar ul li a:hover {
-    color: #1c9e9e;
-}
+    .navbar ul li a:hover {
+        color: #1c9e9e;
+    }
 
 
     .nameDiv h1 {
@@ -1163,11 +1398,11 @@ textarea:valid~label {
         font-weight: 300;
         color: white;
         padding-left: 19px;
-        padding-top: 69px;
+        padding-top: 89px;
     }
 
     .nameDiv h2 {
-        font-size: 43px;
+        font-size: 35px;
         padding-bottom: 4px;
         padding-left: 12px;
         color: white;
@@ -1182,29 +1417,63 @@ textarea:valid~label {
         font-weight: 400;
     }
 
+
     .dynamic-text li {
         color: #1c9e9e;
-        font-size: 27px;
+        font-size: 20px;
     }
 
     .subtitleDiv p {
-        max-width: 55%;
+        max-width: 85%;
     }
 
     .btn {
-        margin-left: 47px;
+        margin-left: 57px;
         margin-top: 30px;
         padding: 3px 30px;
         font-size: 14px;
     }
 
+    .left-side {
+        width: 100%;
+    }
+
+    .right-side {
+        margin-top: 20px;
+        margin-right: -29px;
+
+    }
+
+    .right-side img {
+        width: 400px;
+        height: 80vh;
+        opacity: 1.5;
+        transition: all .2s ease-in-out;
+    }
+
     .container {
-        margin-left: 280px;
+        margin: 60px 241px;
+    }
+
+    .about p {
+        padding-left: 549px;
+        padding-right: 29px;
+    }
+
+    .about .left-side {
+        width: 1%;
+    }
+
+    .about .left-side img {
+        margin-top: 10px;
+        padding-left: 100px;
+        width: 418px;
+        height: 456px;
     }
 
     .projects {
         width: 100%;
-        height: 120vh;
+        height: 420vh;
         background-color: #121517;
     }
 
@@ -1340,11 +1609,48 @@ textarea:valid~label {
 
 
 @media screen and (max-width:1200px) {
+    .nameDiv h1 {
+        margin-top: 80px;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .right-side {
+        margin-top: 20px;
+        margin-right: -29px;
+
+    }
+
+    .right-side img {
+        width: 400px;
+        height: 80vh;
+        opacity: 1.5;
+        transition: all .2s ease-in-out;
+    }
+
+    .about p {
+        padding-left: 549px;
+        padding-right: 29px;
+    }
+
+    .about .left-side {
+        width: 1%;
+    }
+
+    .about .left-side img {
+        margin-top: 150px;
+        padding-left: 100px;
+        width: 418px;
+        height: 456px;
+    }
+
     .about h1 {
         padding-left: 650px;
         font-size: 45px;
         font-weight: 600;
-        padding-top: 60px;
+        padding-top: 180px;
         color: white;
     }
 
@@ -1383,7 +1689,7 @@ textarea:valid~label {
 
     .projects {
         width: 100%;
-        height: 10vh;
+        height: 150vh;
         background-color: #121517;
     }
 
@@ -1431,6 +1737,81 @@ textarea:valid~label {
 
 
 @media screen and (max-width:940px) {
+    .home .right-side {
+        width: 1%;
+    }
+
+    .home .right-side img {
+        margin-left: -411px;
+    }
+
+
+    .wrapper {
+        display: inline-flex;
+        width: 100%;
+    }
+
+    .static-text {
+        animation: transitionIn 0.75s;
+    }
+
+    .wrapper .static-text {
+        font-size: 20px;
+        color: white;
+        padding-left: 16px;
+        font-weight: 400;
+    }
+
+    .dynamic-text {
+        animation: transitionIn 0.75s;
+    }
+
+    .wrapper .dynamic-text {
+        margin-left: 15px;
+    }
+
+    .dynamic-text li {
+        color: #1c9e9e;
+        font-size: 20px;
+        font-weight: 600;
+        position: relative;
+    }
+
+    .dynamic-text li span:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background-color: #040D12;
+        border-left: 2px solid #1c9e9e;
+        animation: typing 2.5s steps(10) infinite;
+    }
+
+    @keyframes typing {
+        50% {
+            left: 100%;
+            margin: 0 -35px 0 35px;
+        }
+    }
+
+
+    .about h1 {
+        padding-left: 580px;
+        font-size: 35px;
+        font-weight: 600;
+        padding-top: 253px;
+        color: white;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .subtitleDiv p {
+        max-width: 57%;
+    }
+
     .headTitle h2 {
         font-size: 15px;
         font-weight: 400;
@@ -1442,7 +1823,7 @@ textarea:valid~label {
 
     .projects {
         width: 100%;
-        height: 169vh;
+        height: 199vh;
         background-color: #121517;
     }
 
@@ -1487,6 +1868,10 @@ textarea:valid~label {
 
 
 @media screen and (max-width:992px) {
+
+    .cursor {
+        display: none;
+    }
 
     .nameDiv h1 {
         font-size: 24px;
@@ -1565,7 +1950,7 @@ textarea:valid~label {
 
     .projects {
         width: 100%;
-        height: 167vh;
+        height: 217vh;
         background-color: #121517;
     }
 
@@ -1581,7 +1966,7 @@ textarea:valid~label {
     .contact {
         margin-right: 70px;
         padding-left: 100px;
-        height: 140vh;
+        height: 110vh;
         padding-top: 60px;
     }
 
@@ -1614,6 +1999,10 @@ textarea:valid~label {
 
 
 @media (max-width:850px) {
+
+    .cursor {
+        display: none;
+    }
 
     .mobile-btn {
         display: block;
@@ -1717,7 +2106,7 @@ textarea:valid~label {
     }
 
     .btn {
-        margin-left: 45px;
+        margin-left: 65px;
         margin-top: 30px;
         padding: 3px 30px;
         font-size: 13px;
@@ -1725,19 +2114,25 @@ textarea:valid~label {
 
     .subtitleDiv p {
         color: rgb(204, 204, 204);
-        padding-left: 45px;
+        padding-left: 65px;
         padding-top: 12px;
         max-width: 50%;
         font-size: 12px;
         font-weight: 400;
         animation: transitionIn 2.75s;
     }
+    .about .left-side img {
+        margin-top: 150px;
+        padding-left: 100px;
+        width: 380px;
+        height: 417px;
+    }
 
     .about h1 {
         padding-left: 450px;
         font-size: 35px;
         font-weight: 600;
-        padding-top: 60px;
+        padding-top: 170px;
         color: white;
     }
 
@@ -1755,11 +2150,12 @@ textarea:valid~label {
     }
 
     .about p {
-        padding-left: 348px;
+        padding-left: 398px;
         font-weight: 360;
         padding-top: 20px;
         padding-right: 30px;
         min-width: 90%;
+        max-width: 70%;
         font-size: 16px;
     }
 
@@ -1777,7 +2173,7 @@ textarea:valid~label {
 
     .projects {
         width: 100%;
-        height: 312vh;
+        height: 222vh;
         background-color: #121517;
     }
 
@@ -1792,7 +2188,7 @@ textarea:valid~label {
 
     .contact {
         margin-right: 70px;
-        height: 140vh;
+        height: 110vh;
         padding-top: 50px;
     }
 
@@ -1822,6 +2218,10 @@ textarea:valid~label {
 
 
 @media (max-width:768px) {
+
+    .cursor {
+        display: none;
+    }
 
     .mobile-btn {
         display: block;
@@ -1924,7 +2324,7 @@ textarea:valid~label {
         font-weight: 400;
         color: white;
         padding-left: 19px;
-        padding-top: 109px;
+        padding-top: 39px;
     }
 
     .nameDiv h2 {
@@ -1953,15 +2353,27 @@ textarea:valid~label {
         padding: 3px 30px;
         font-size: 13px;
     }
+    .dynamic-text li span:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 52%;
+        animation: typing 2.5s steps(2) infinite;
+    }
 
     .subtitleDiv p {
         color: rgb(204, 204, 204);
         padding-left: 45px;
         padding-top: 12px;
-        max-width: 70%;
+        max-width: 50%;
         font-size: 12px;
         font-weight: 400;
         animation: transitionIn 2.75s;
+    }
+    .about .left-side img {
+        margin-top: 54px;
+        width: 300px;
+        height: 50vh;
     }
 
     .about {
@@ -1983,7 +2395,7 @@ textarea:valid~label {
     }
 
     .about h2 {
-        padding-left: 400px;
+        padding-left: 380px;
         padding-top: 20px;
         font-size: 24px;
         padding-bottom: 0;
@@ -1991,10 +2403,10 @@ textarea:valid~label {
     }
 
     .about p {
-        padding-left: 348px;
+        padding-left: 378px;
         font-weight: 360;
         padding-top: 20px;
-        padding-right: 30px;
+        padding-right: 10px;
         min-width: 90%;
         font-size: 14px;
     }
@@ -2009,12 +2421,15 @@ textarea:valid~label {
 
     .skills {
         width: 100%;
-        height: 120vh;
+        height: 100vh;
+    }
+    .headTitle{
+        padding-top: 80px;
     }
 
     .projects {
         width: 100%;
-        height: 319vh;
+        height: 229vh;
         background-color: #121517;
     }
 
@@ -2029,7 +2444,7 @@ textarea:valid~label {
 
     .contact {
         margin-right: 10px;
-        height: 140vh;
+        height: 100vh;
         padding-top: 40px;
     }
 
@@ -2078,19 +2493,34 @@ textarea:valid~label {
 
 @media (max-width:765px) {
 
+
+    .cursor {
+        display: none;
+    }
+
     .dynamic-text li {
         color: #1c9e9e;
         font-size: 1.2rem;
     }
+    .dynamic-text li span:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 87%;
+        animation: typing 2.5s steps(3) infinite;
+    }
 
     .subtitleDiv p {
         color: rgb(204, 204, 204);
-        padding-left: 45px;
+        padding-left: 65px;
         padding-top: 12px;
-        max-width: 65%;
+        max-width: 45%;
         font-size: 12px;
         font-weight: 400;
         animation: transitionIn 2.75s;
+    }
+    .btn {
+        margin-left: 60px;
     }
 
     .about h1 {
@@ -2156,6 +2586,10 @@ textarea:valid~label {
 
 @media (max-width:724px) {
 
+    .cursor {
+        display: none;
+    }
+
     .dynamic-text li {
         color: #1c9e9e;
         font-size: 19px;
@@ -2163,20 +2597,35 @@ textarea:valid~label {
 
     .subtitleDiv p {
         color: rgb(204, 204, 204);
-        padding-left: 45px;
+        padding-left: 65px;
         padding-top: 12px;
-        max-width: 65%;
+        max-width: 45%;
         font-size: 12px;
         font-weight: 400;
         animation: transitionIn 2.75s;
     }
 
+    .dynamic-text li span:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 54%;
+        animation: typing 2.5s steps(2) infinite;
+    }
     .about h1 {
-        padding-left: 450px;
+        padding-left: 430px;
         font-size: 35px;
         font-weight: 600;
         padding-top: 60px;
         color: white;
+    }
+    .right-side img {
+        width: 387px;
+        height: 84vh;
+    }
+
+    .home .right-side img {
+        margin-left: -369px;
     }
 
     .about h1 span {
@@ -2256,25 +2705,43 @@ textarea:valid~label {
 
 
 @media (max-width:703px) {
+
+    .cursor {
+        display: none;
+    }
+
     .wrapper .static-text {
         font-size: 19px;
     }
+
     .dynamic-text li {
         color: #1c9e9e;
         font-size: 18px;
     }
 
+    
+    .dynamic-text li span:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 94%;
+        animation: typing 2.5s steps(10) infinite;
+    }
     .subtitleDiv p {
         color: rgb(204, 204, 204);
         padding-left: 60px;
         padding-top: 12px;
-        max-width: 70%;
+        max-width: 50%;
         font-size: 12px;
         font-weight: 400;
         animation: transitionIn 2.75s;
     }
+
     .btn {
         margin-left: 60px;
+    }
+    .about .left-side img {
+       display: none;
     }
 
     .about h1 {
@@ -2284,6 +2751,7 @@ textarea:valid~label {
         padding-top: 60px;
         color: white;
     }
+
     .nameDiv h1 {
         font-size: 21px;
         font-weight: 400;
@@ -2325,7 +2793,7 @@ textarea:valid~label {
 
     .projects {
         width: 100%;
-        height: 310vh;
+        height: 220vh;
         background-color: #121517;
     }
 
@@ -2338,8 +2806,8 @@ textarea:valid~label {
         margin-left: 15px;
     }
 
-    .contact{
-        height: 140vh;
+    .contact {
+        height: 100vh;
     }
 }
 
@@ -2367,6 +2835,24 @@ textarea:valid~label {
 
 
 @media screen and (max-width:681px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .cursor {
+        display: none;
+    }
+    .home .right-side img {
+       display: none;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.1rem 4rem;
+        background-color: #040D12;
+        align-items: center;
+        width: 85%;
+    }
 
     .navbar {
         width: 30%;
@@ -2374,7 +2860,7 @@ textarea:valid~label {
         position: absolute;
         background-color: #091C27;
         top: 20px;
-        left: 500px;
+        left: 440px;
     }
 
     .nav-Icons[name='close-outline'] {
@@ -2413,7 +2899,7 @@ textarea:valid~label {
     }
 
     .subtitleDiv p {
-        max-width: 68%;
+        max-width: 88%;
     }
 
     .btn {
@@ -2422,7 +2908,8 @@ textarea:valid~label {
         padding: 3px 30px;
         font-size: 14px;
     }
-    .about{
+
+    .about {
         height: 90vh;
     }
 
@@ -2448,7 +2935,8 @@ textarea:valid~label {
     }
 
     .about p {
-        padding-left: 139px;;
+        padding-left: 139px;
+        ;
         font-weight: 360;
         padding-top: 30px;
         text-align: center;
@@ -2475,7 +2963,7 @@ textarea:valid~label {
 
     .projects {
         width: 100%;
-        height: 320vh;
+        height: 220vh;
         background-color: #121517;
     }
 
@@ -2491,7 +2979,7 @@ textarea:valid~label {
     .contact {
         display: grid;
         margin-right: 10px;
-        height: 180vh;
+        height: 130vh;
         padding-top: 40px;
         padding-bottom: 433px;
     }
@@ -2580,6 +3068,10 @@ textarea:valid~label {
 
 @media (max-width:675px) {
 
+    .cursor {
+        display: none;
+    }
+
     .nameDiv h1 {
         padding-top: 60px;
     }
@@ -2593,7 +3085,7 @@ textarea:valid~label {
         color: rgb(204, 204, 204);
         padding-left: 60px;
         padding-top: 12px;
-        max-width: 75%;
+        max-width: 95%;
         font-size: 12px;
         font-weight: 400;
         animation: transitionIn 2.75s;
@@ -2603,7 +3095,7 @@ textarea:valid~label {
         padding-left: 260px;
         font-size: 35px;
         font-weight: 600;
-        padding-top: 90px;
+        padding-top: 130px;
         color: white;
     }
 
@@ -2652,6 +3144,11 @@ textarea:valid~label {
     .icons .insta {
         padding-left: 160px;
     }
+    .submit {
+        width: 50%;
+        font-size: 14px;
+        margin-left: -31px;
+    }
 
 }
 
@@ -2680,6 +3177,10 @@ textarea:valid~label {
 
 @media (max-width:640px) {
 
+    .cursor {
+        display: none;
+    }
+
     .nameDiv h1 {
         padding-top: 70px;
     }
@@ -2697,7 +3198,7 @@ textarea:valid~label {
         color: rgb(204, 204, 204);
         padding-left: 60px;
         padding-top: 12px;
-        max-width: 75%;
+        max-width: 95%;
         font-size: 12px;
         font-weight: 400;
         animation: transitionIn 2.75s;
@@ -2712,7 +3213,7 @@ textarea:valid~label {
         padding-left: 260px;
         font-size: 35px;
         font-weight: 600;
-        padding-top: 60px;
+        padding-top: 160px;
         color: white;
     }
 
@@ -2758,7 +3259,7 @@ textarea:valid~label {
 
     .projects {
         width: 100%;
-        height: 320vh;
+        height: 230vh;
         background-color: #121517;
     }
 
@@ -2802,10 +3303,11 @@ textarea:valid~label {
     .contact {
         display: grid;
         margin-right: 10px;
-        height: 184vh;
+        height: 124vh;
         padding-top: 40px;
         padding-bottom: 13px;
     }
+
     .submit {
         width: 50%;
         font-size: 14px;
@@ -2872,6 +3374,10 @@ textarea:valid~label {
 
 @media (max-width:634px) {
 
+    .cursor {
+        display: none;
+    }
+
     .dynamic-text li {
         color: #1c9e9e;
         font-size: 16px;
@@ -2881,7 +3387,7 @@ textarea:valid~label {
         color: rgb(204, 204, 204);
         padding-left: 60px;
         padding-top: 12px;
-        max-width: 80%;
+        max-width: 100%;
         font-size: 12px;
         font-weight: 400;
         animation: transitionIn 2.75s;
@@ -2933,7 +3439,7 @@ textarea:valid~label {
     .contact {
         display: grid;
         margin-right: 10px;
-        height: 182vh;
+        height: 122vh;
         padding-top: 40px;
         padding-bottom: 13px;
     }
@@ -2991,10 +3497,11 @@ textarea:valid~label {
 
 
 @media (max-width:614px) {
-    .nameDiv h1{
+    .nameDiv h1 {
         font-size: 20px;
         margin-top: 30px;
     }
+
     .nameDiv h2 {
         font-size: 35px;
     }
@@ -3006,7 +3513,7 @@ textarea:valid~label {
 
     .subtitleDiv p {
         color: rgb(204, 204, 204);
-        padding-left:60px;
+        padding-left: 60px;
         padding-top: 12px;
         max-width: 85%;
         font-size: 12px;
@@ -3077,7 +3584,7 @@ textarea:valid~label {
         padding-top: 20px;
         padding-right: 40px;
         text-align: center;
-        max-width: 80%;
+        max-width: 90%;
         font-size: 15px;
     }
 
@@ -3101,7 +3608,7 @@ textarea:valid~label {
     .contact {
         display: grid;
         margin-right: 10px;
-        height: 185vh;
+        height: 125vh;
         padding-top: 40px;
         padding-bottom: 13px;
     }
@@ -3194,7 +3701,7 @@ textarea:valid~label {
     }
 
     .nameDiv h1 {
-        margin-top: 30px;
+        margin-top: 100px;
     }
 
     .subtitleDiv p {
@@ -3279,7 +3786,7 @@ textarea:valid~label {
     }
 
     .nameDiv h1 {
-        margin-top: 30px;
+        margin-top: 110px;
     }
 
     .navbar li {
@@ -3336,7 +3843,7 @@ textarea:valid~label {
         color: rgb(204, 204, 204);
         padding-left: 60px;
         padding-top: 18px;
-        max-width: 70%;
+        max-width: 100%;
         font-size: 12px;
         font-weight: 400;
         animation: transitionIn 2.75s;
@@ -3449,7 +3956,7 @@ textarea:valid~label {
     }
 
     .nameDiv h1 {
-        margin-top: 30px;
+        margin-top: 130px;
     }
 
     .navbar li {
@@ -3506,10 +4013,18 @@ textarea:valid~label {
         color: rgb(204, 204, 204);
         padding-left: 60px;
         padding-top: 18px;
-        max-width: 70%;
+        max-width: 100%;
         font-size: 12px;
         font-weight: 400;
         animation: transitionIn 2.75s;
+    }
+    .navbar {
+        width: 30%;
+        height: 50vh;
+        position: absolute;
+        background-color: #091C27;
+        top: 20px;
+        left: 394px;
     }
 
     .btn {
@@ -3663,7 +4178,7 @@ textarea:valid~label {
     }
 
     .nameDiv h1 {
-        margin-top: 30px;
+        margin-top: 130px;
     }
 
     .navbar li {
@@ -3738,7 +4253,7 @@ textarea:valid~label {
         padding-left: 200px;
         font-size: 35px;
         font-weight: 600;
-        padding-top: 60px;
+        padding-top: 140px;
         color: white;
     }
 
@@ -3784,8 +4299,8 @@ textarea:valid~label {
     .row img {
         width: 238px;
     }
-      
-    .layer{
+
+    .layer {
         width: 239px;
         margin: -4px -1px;
     }
@@ -3802,14 +4317,14 @@ textarea:valid~label {
     .row:hover img {
         transform: scale(1);
     }
-    
+
     .row:hover .layer {
         width: 239px;
         height: 217px;
         margin: -4px -1px;
     }
-    
-    
+
+
 
     .contact-title h1 {
         padding-top: 19px;
@@ -3875,11 +4390,13 @@ textarea:valid~label {
 
 
 
+
 @media (max-width:400px) {
-    
-    .logo h1{
+
+    .logo h1 {
         margin-left: -13px;
     }
+
     .cursor {
         display: none;
     }
@@ -4100,7 +4617,8 @@ textarea:valid~label {
         height: 129vh;
     }
 
-    input, textarea {
+    input,
+    textarea {
         width: 175%;
         margin-left: 20px;
     }
@@ -4139,6 +4657,7 @@ textarea:valid~label {
         min-width: 55%;
         margin-left: 30px;
     }
+
     label {
         height: 100%;
         position: absolute;
@@ -4164,4 +4683,90 @@ textarea:valid~label {
     .footer h1 {
         font-size: 10px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* !==========================> 359px <===============! */
+
+
+
+@media (max-width:359px) {
+
+    .logo h1 {
+        margin-left: -32px;
+    }
+
+    .navbar {
+        width: 40%;
+        /* height: 40vh; */
+        position: absolute;
+        background-color: #091C27;
+        top: 10px;
+        left: 199px;
+    }
+
+    .list-Item {
+        flex-direction: column;
+        margin-top: 18px;
+        margin-right: 3px;
+    }
+
+    .about h1 {
+        padding-left: 96px;
+    }
+
+    .about p {
+        padding-left: 16px;
+        font-weight: 360;
+        max-width: 100%;
+    }
+
+
+    .about .Aboutbtn {
+        margin-left: 91px;
+        margin-top: 30px;
+    }
+
+    .row {
+        width: 100px;
+        border-radius: 8px;
+        margin-left: 60px;
+    }
+
+    .container {
+        margin-left: 27px;
+    }
+
+    .about h2 {
+        padding-left: 29px;
+    }
+}
+
+
+
+
+@media (max-width:390px) {
+
+    .projects {
+        height: 289vh;
+    }
+
+
 }
