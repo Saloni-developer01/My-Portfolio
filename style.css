@@ -1410,7 +1410,7 @@ textarea:valid~label {
     }
 
     .wrapper .static-text {
-        font-size: 26px;
+        font-size: 16px;
         font-weight: 400;
         color: white;
         padding-left: 15px;
@@ -1420,7 +1420,7 @@ textarea:valid~label {
 
     .dynamic-text li {
         color: #1c9e9e;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .subtitleDiv p {
@@ -1523,7 +1523,8 @@ textarea:valid~label {
     }
 
     .contact {
-        margin-right: 70px;
+        padding-right: 70px;
+        padding-left: 70px;
         height: 150vh;
         padding-top: 150px;
     }
